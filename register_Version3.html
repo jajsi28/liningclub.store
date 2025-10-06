@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бүртгүүлэх - Lining Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="project/assets/Lining-Club-Logo.png" alt="Lining Club Logo" class="logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="men.html" class="nav-link">Men</a></li>
+                <li><a href="women.html" class="nav-link">Women</a></li>
+                <li><a href="kids.html" class="nav-link">Kids</a></li>
+                <li><a href="sale.html" class="nav-link">Sale</a></li>
+                <li><a href="snkrs.html" class="nav-link">SNKRS</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="nav-search">
+                    <input type="text" class="nav-search-input" placeholder="Хайх..." onkeydown="if(event.key==='Enter'){searchProducts(this.value);}">
+                </div>
+                <div class="search-icon">🔍</div>
+                <div class="cart-icon">🛒 <span class="cart-count">0</span></div>
+                <a href="login.html" class="profile-icon" title="Нэвтрэх">👤</a>
+            </div>
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="register-hero">
+        <div class="container">
+            <h1>Бүртгүүлэх</h1>
+            <p>Өөрийн мэдээллээ бөглөнө үү. <br> Бид таны мэдээллийг нууцлалтай хадгална.</p>
+        </div>
+    </section>
+
+    <section class="register-section">
+        <div class="container">
+            <form class="register-form" id="registerForm">
+                <div class="form-group">
+                    <label for="reg-name">Таны нэр *</label>
+                    <input type="text" id="reg-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Имэйл эсвэл утас *</label>
+                    <input type="email" id="reg-email" name="email" placeholder="email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-phone">Утасны дугаар *</label>
+                    <input type="tel" id="reg-phone" name="phone" required pattern="^[0-9+()-\s]{6,}$">
+                </div>
+                <div class="form-group">
+                    <label for="reg-address">Амьдарч буй хаяг *</label>
+                    <input type="text" id="reg-address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Нууц үг *</label>
+                    <input type="password" id="reg-password" name="password" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <label for="reg-password2">Нууц үгээ давтана уу *</label>
+                    <input type="password" id="reg-password2" name="password2" required minlength="6">
+                </div>
+                <button type="submit" class="btn-register">Бүртгүүлэх</button>
+                <p class="login-link">Бүртгэлтэй бол <a href="login.html">Нэвтрэх</a></p>
+                <div id="register-success" class="success-message" style="display:none;">Бүртгэл амжилттай! Та одоо нэвтэрч орно уу.</div>
+            </form>
+        </div>
+    </section>
+    <script src="register.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

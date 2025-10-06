@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Lining Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        .auth-wrapper { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding-top: 100px; padding-bottom: 60px; background: linear-gradient(135deg, #fff3e0 0%, #ffe0cc 100%); }
+        .auth-card { background: #fff; width: 100%; max-width: 420px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 32px; }
+        .auth-card h1 { margin-bottom: 8px; font-size: 1.8rem; color: #000; }
+        .auth-card p { margin-bottom: 24px; color: #666; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; margin-bottom: 6px; font-weight: 600; color: #000; }
+        .form-group input { width: 100%; padding: 12px 14px; border: 2px solid #eee; border-radius: 10px; font-size: 16px; }
+        .form-group input:focus { outline: none; border-color: #e07a5f; }
+        .btn-auth { width: 100%; padding: 14px; border: none; border-radius: 10px; background: #000; color: #fff; font-weight: 700; cursor: pointer; }
+        .btn-auth:hover { background: #333; }
+        .auth-footer { margin-top: 16px; text-align: center; color: #666; }
+        .auth-footer a { color: #e07a5f; text-decoration: none; font-weight: 600; }
+    </style>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" aria-label="Lining Club Home">
+                    <img src="project/assets/Lining-Club-Logo.png" alt="Lining Club Logo" class="logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="men.html" class="nav-link">Men</a></li>
+                <li><a href="women.html" class="nav-link">Women</a></li>
+                <li><a href="kids.html" class="nav-link">Kids</a></li>
+                <li><a href="sale.html" class="nav-link">Sale</a></li>
+                <li><a href="snkrs.html" class="nav-link">SNKRS</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-icon">🔍</div>
+                <div class="cart-icon">🛒 <span class="cart-count">0</span></div>
+                <div class="profile-icon">👤</div>
+            </div>
+        </div>
+    </nav>
+    <main class="auth-wrapper">
+        <div class="auth-card">
+            <h1>Welcome back</h1>
+            <p>Sign in to continue</p>
+            <form id="signinForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn-auth">Sign In</button>
+            </form>
+            <div class="auth-footer">
+                <span>New here? <a href="signup.html">Create Account</a></span>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.getElementById('signinForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            alert('Signed in (demo). You can wire this to your backend.');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
+
+

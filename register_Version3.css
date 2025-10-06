@@ -1,0 +1,99 @@
+.register-hero {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 100px 0 60px;
+    text-align: center;
+}
+
+.register-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.register-section {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.register-form {
+    background: #fff;
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.13);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: .4rem;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 4px;
+    background: #f8fafd;
+    transition: border-color .3s;
+}
+
+.form-group input:focus {
+    border-color: #40c9ff;
+    outline: none;
+}
+
+.btn-register {
+    background: linear-gradient(90deg, #40c9ff 0%, #00f2fe 100%);
+    color: #fff;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 8px;
+}
+
+.btn-register:hover {
+    background: linear-gradient(90deg, #00f2fe 0%, #40c9ff 100%);
+    transform: translateY(-2px) scale(1.02);
+}
+
+.login-link {
+    text-align: center;
+    margin: 0.6rem 0 0;
+    color: #666;
+}
+
+.login-link a {
+    color: #0077ff;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.success-message {
+    background: #28a745;
+    color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 700;
+}
+@media (max-width: 600px) {
+    .register-form {
+        padding: 1.2rem .5rem;
+    }
+    .register-hero h1 {
+        font-size: 1.5rem;
+    }
+}
